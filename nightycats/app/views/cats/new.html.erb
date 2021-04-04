@@ -1,3 +1,44 @@
 
 
-<form action="" method=""></form>
+<form action="/cats/new" method="GET">
+    <label for="name">name: </label>
+    <input  id="name" type="text">
+
+    <p>Select SEX Type</p>
+    <div>
+        <input type="radio" id="M" name='cat[sex]' value="M">
+        <label for="M">male </label>
+    </div>
+    <div>
+        <input type="radio" id="sex" name='cat[sex]' value="F">
+        <label for="F">female </label>
+    </div>
+
+    <p>Select Color</p>
+    <select name="cat[color]" id="cat_color">
+        <option disabled selected>-- select a color --</option>
+          <% Cat::AVILABLE_COLORS.each do |color| %>
+            <option
+              value="<%= color %>">
+              <%= color.upcase %>
+         </option>
+          <% end %>
+    </select>
+    <br>
+    <br>
+    <br>
+    <label for="date">Date:</label>
+    <br>
+    <input type="date" id="date" name=cat[date] >
+    <br>
+    <br>
+    <label for="disc">Cat discreption:</label>
+    <br>
+    <textarea id="disc" name="cat[discreption]"></textarea> 
+
+
+
+
+
+
+</form>

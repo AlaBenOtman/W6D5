@@ -2,7 +2,7 @@ require 'action_view'
 class Cat < ApplicationRecord
     ActionView::Helpers::DateHelper
 
-    AVILABLE_COLORS = %w(black)
+    AVILABLE_COLORS = %w(black white orange green yellow blue)
     validates :color, inclusion: AVILABLE_COLORS
     validates :sex, inclusion: %w(M F)
     validates :birth_date, :color, :name, :sex, :description,  presence: true, null: false 
