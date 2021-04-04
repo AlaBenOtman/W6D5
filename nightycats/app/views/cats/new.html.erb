@@ -1,6 +1,6 @@
 
 
-<form action="/cats/new" method="GET">
+<form action="<%=new_cat_url(@cat)%>" method="GET">
     <label for="name">name: </label>
     <input  id="name" type="text">
 
@@ -35,6 +35,8 @@
     <label for="disc">Cat discreption:</label>
     <br>
     <textarea id="disc" name="cat[discreption]"></textarea> 
+
+    <input type="submit" value="Update cat">
 
 
 
